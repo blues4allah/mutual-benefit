@@ -44,17 +44,18 @@ footer {
 main {
     display: flex;
     padding-left: 200px;
-    flex-direction: right;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 50px;
+    gap: 200px;
 }
 
 .work-list {
   display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
 }
 
 section {
@@ -64,19 +65,28 @@ section {
     gap: 15px;
 }
 
- .carrs h2 {
+.preview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px; 
+}
+
+.preview
+
+ .one-degree h2 {
     color: #CC3D3D;
 }
 
- .farm h2 {
+ .one-home h2 {
     color: #35BFFF;
 }
 
- .bank h2 {
+ .unite-us h2 {
     color: #DD6C21;
 }
 
- .one h2 {
+ .zoom h2 {
     color: #17BD99;
 }
 
@@ -112,7 +122,9 @@ p {
     padding-left: 60px;
     flex-direction: column;
   }
-
+  .preview {
+    display: none;
+  }
 
 }
 
