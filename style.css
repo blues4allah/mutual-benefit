@@ -99,9 +99,16 @@ p {
 /* Make the anchor fill the section */
 .clickable-section {
   display: block;
+  text-decoration: none !important; /* remove underline */
+  color: inherit !important;         /* use your text color */
+  -webkit-tap-highlight-color: transparent; /* remove highlight on iOS */
+  overflow: hidden; /* ensures smooth transform animations */
+}
+
+.clickable-section:hover,
+.clickable-section:active {
   text-decoration: none;
   color: inherit;
-  overflow: hidden; /* ensures smooth transform animations */
 }
 
 /* Apply transform and color transitions to h2 and p */
