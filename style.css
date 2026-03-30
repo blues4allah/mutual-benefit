@@ -41,10 +41,10 @@ footer {
   text-align: center;
 }
 
-main {
+.main {
     display: flex;
     padding-left: 200px;
-    flex-direction: right;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     gap: 50px;
@@ -55,6 +55,38 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap: 50px;
+    width: 50%;
+}
+
+/* Preview video on the right */
+.preview {
+  height: 281px;
+  width: 500px;
+  position: relative; /* for absolute positioning of video overlays */
+  min-height: 281px; /* match video height */
+}
+
+/* Hide default video initially */
+.hover-video {
+  width: 500px;
+  height: 281px;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(10px);
+  pointer-events: none; /* so it doesn't block hover */
+}
+
+.work-list:hover ~ .preview .hover-video {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Show the correct video on hover */
+.clickable-section.one-degree:hover ~ .preview .hover-video.one-degree,
+.clickable-section.one-home:hover ~ .preview .hover-video.one-home,
+.clickable-section.unite-us:hover ~ .preview .hover-video.unite,
+.clickable-section.zoomforth:hover ~ .preview .hover-video.zoomforth {
+  opacity: 1;
 }
 
 section {
@@ -64,19 +96,19 @@ section {
     gap: 15px;
 }
 
- .carrs h2 {
+ .one-degree h2 {
     color: #CC3D3D;
 }
 
- .farm h2 {
+ .one-home h2 {
     color: #35BFFF;
 }
 
- .bank h2 {
+ .unite-us h2 {
     color: #DD6C21;
 }
 
- .one h2 {
+ .zoomforth h2 {
     color: #17BD99;
 }
 
