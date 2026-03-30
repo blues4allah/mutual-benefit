@@ -31,6 +31,16 @@ header {
   text-align: center;
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 100px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
 main {
     display: flex;
     padding-left: 200px;
