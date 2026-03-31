@@ -213,20 +213,8 @@ p {
   transform: scale(1.1);
 }
 
-.clickable-section:hover .sec1 p {
-  transform: translateY(-1px);
-}
-
-.clickable-section:hover .sec2 p {
-  transform: translateY(-1px);
-}
-
-.clickable-section:hover .sec3 p {
-  transform: translateY(-1px);
-}
-
-.clickable-section:hover .sec4 p {
-  transform: translateY(-1px);
+.clickable-section:hover p {
+  transform: translateY(-2px);
 }
 
 
