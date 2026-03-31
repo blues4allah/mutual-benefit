@@ -215,6 +215,7 @@ p {
 
 .clickable-section:hover p {
   transform: translateY(-2px);
+  color: #d5d5d5;
 }
 
 
