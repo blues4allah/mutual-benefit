@@ -72,22 +72,20 @@ section {
     gap: 5px; 
 }
 
-.preview
-
- .one-degree h2 {
-    color: #CC3D3D;
+.one-degree h2 {
+  color: #CC3D3D;
 }
 
- .one-home h2 {
-    color: #35BFFF;
+.one-home h2 {
+  color: #35BFFF;
 }
 
- .unite-us h2 {
-    color: #DD6C21;
+.unite-us h2 {
+  color: #DD6C21;
 }
 
- .zoom h2 {
-    color: #17BD99;
+.zoom h2 {
+  color: #17BD99;
 }
 
 /* Logo font */
