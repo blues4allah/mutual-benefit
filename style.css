@@ -74,6 +74,7 @@ section {
 
 .video-bg video {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -94,18 +95,22 @@ section {
 /* Hover rules remain the same */
 .work-list:has(.sec1:hover) ~ .video-bg #vid1 {
   opacity: 1;
+  visibility: visible;
 }
 
 .work-list:has(.sec2:hover) ~ .video-bg #vid2 {
   opacity: 1;
+  visibility: visible;
 }
 
 .work-list:has(.sec3:hover) ~ .video-bg #vid3 {
   opacity: 1;
+  visibility: visible;
 }
 
 .work-list:has(.sec4:hover) ~ .video-bg #vid4 {
   opacity: 1;
+  visibility: visible;
 }
 
 .work-list {
@@ -222,4 +227,8 @@ p {
 /* Change cursor on hover */
 .clickable-section:hover {
   cursor: pointer;
+}
+
+.same-width {
+  width: 200px;
 }
