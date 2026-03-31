@@ -74,7 +74,6 @@ section {
 
 .video-bg video {
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
 }
 
@@ -88,29 +87,31 @@ section {
   transform: translate(-50%, -50%); /* center horizontally & vertically */
   object-fit: cover;               /* cover the screen without distortion */
   opacity: 0;
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.5s ease;
   pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .video-hover:hover video {
+    opacity: 1;
+  }
 }
 
 /* Hover rules remain the same */
 .work-list:has(.sec1:hover) ~ .video-bg #vid1 {
   opacity: 1;
-  visibility: visible;
 }
 
 .work-list:has(.sec2:hover) ~ .video-bg #vid2 {
   opacity: 1;
-  visibility: visible;
 }
 
 .work-list:has(.sec3:hover) ~ .video-bg #vid3 {
   opacity: 1;
-  visibility: visible;
 }
 
 .work-list:has(.sec4:hover) ~ .video-bg #vid4 {
   opacity: 1;
-  visibility: visible;
 }
 
 .work-list {
@@ -124,6 +125,18 @@ section {
 .work-list:has(.sec3:hover) ~ .video-bg video:not(#vid3),
 .work-list:has(.sec4:hover) ~ .video-bg video:not(#vid4) {
   opacity: 0;
+}
+
+/* Default: disable interaction (mobile first) */
+.video-hover video {
+  pointer-events: none;
+}
+
+/* Only enable hover behavior on real hover devices (desktop) */
+@media (hover: hover) and (pointer: fine) {
+  .video-hover:hover video {
+    pointer-events: auto;
+  }
 }
 
 .one-degree h2 {
