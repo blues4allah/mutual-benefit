@@ -65,11 +65,60 @@ section {
     gap: 15px;
 }
 
-.preview {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px; 
+.video-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-bg video {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Video container stays fixed behind content */
+.video-bg video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;      /* scale dynamically */
+  height: 50%;     /* fill vertically */
+  transform: translate(-50%, -50%); /* center horizontally & vertically */
+  object-fit: cover;               /* cover the screen without distortion */
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  pointer-events: none;
+}
+
+/* Hover rules remain the same */
+.work-list:has(.sec1:hover) ~ .video-bg #vid1 {
+  opacity: 1;
+}
+
+.work-list:has(.sec2:hover) ~ .video-bg #vid2 {
+  opacity: 1;
+}
+
+.work-list:has(.sec3:hover) ~ .video-bg #vid3 {
+  opacity: 1;
+}
+
+.work-list:has(.sec4:hover) ~ .video-bg #vid4 {
+  opacity: 1;
+}
+
+.work-list {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hide others */
+.work-list:has(.sec1:hover) ~ .video-bg video:not(#vid1),
+.work-list:has(.sec2:hover) ~ .video-bg video:not(#vid2),
+.work-list:has(.sec3:hover) ~ .video-bg video:not(#vid3),
+.work-list:has(.sec4:hover) ~ .video-bg video:not(#vid4) {
+  opacity: 0;
 }
 
 .one-degree h2 {
@@ -124,6 +173,14 @@ p {
     display: none;
   }
 
+  .video-bg video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;      /* scale dynamically */
+    height: 25%;     /* fill vertically */
+    transform: translate(-50%, -50%); /* center horizontally & vertically */
+  }
 }
 
 /* Make the anchor fill the section */
