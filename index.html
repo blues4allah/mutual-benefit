@@ -72,11 +72,11 @@
     </div>
 
       <div class="video-bg">
-        <video id="vid1" src="./videos/one-degree.mp4" autoplay muted loop playsinline width="500" height="281"></video>
-        <video id="vid2" src="videos/no-king.mp4" autoplay muted loop playsinline width="500" height="281"></video>
-        <video id="vid3" src="./videos/zoom5.mp4" autoplay muted loop playsinline width="500" height="281"></video>
-        <video id="vid4" src="videos/one-home.mp4" autoplay muted loop playsinline width="500" height="281"></video>
-        <video id="vid5" src="videos/zoom4.mp4" autoplay muted loop playsinline width="500" height="281"></video>
+        <video id="vid1" src="./videos/one-degree.mp4" muted loop playsinline width="500" height="281"></video>
+        <video id="vid2" src="videos/no-king.mp4" muted loop playsinline width="500" height="281"></video>
+        <video id="vid3" src="./videos/zoom5.mp4" muted loop playsinline width="500" height="281"></video>
+        <video id="vid4" src="videos/one-home.mp4" muted loop playsinline width="500" height="281"></video>
+        <video id="vid5" src="videos/zoom4.mp4" muted loop playsinline width="500" height="281"></video>
       </div>
 
   </main>
@@ -89,5 +89,47 @@
       <div><h2>~*</h2></div>
     </footer>
 
-</body>
+    <script>
+const sections = document.querySelectorAll('.sec');
+const videos = document.querySelectorAll('.video-bg video');
+let currentVideo = null; // track which video is showing
+
+sections.forEach((section, index) => {
+  section.addEventListener('mouseenter', () => {
+    const vid = videos[index];
+
+    // fade out previous video
+    if (currentVideo && currentVideo !== vid) {
+      currentVideo.style.opacity = 0;
+      setTimeout(() => {
+        currentVideo.style.visibility = 'hidden';
+        currentVideo.pause();
+        currentVideo.currentTime = 0;
+      }, 400); // match CSS transition
+    }
+
+    // fade in new video
+    vid.style.visibility = 'visible';
+    vid.style.opacity = 1;
+    vid.play();
+
+    currentVideo = vid;
+  });
+});
+
+// fade out video when leaving the whole work list
+document.querySelector('.work-list').addEventListener('mouseleave', () => {
+  if (currentVideo) {
+    currentVideo.style.opacity = 0;
+    setTimeout(() => {
+      currentVideo.style.visibility = 'hidden';
+      currentVideo.pause();
+      currentVideo.currentTime = 0;
+      currentVideo = null;
+    }, 400);
+  }
+});
+</script>
+
+  </body>
 </html>
