@@ -92,7 +92,7 @@
     <script>
 const sections = document.querySelectorAll('.sec');
 const videos = document.querySelectorAll('.video-bg video');
-let currentVideo = null; // track which video is showing
+let currentVideo = null;
 
 sections.forEach((section, index) => {
   section.addEventListener('mouseenter', () => {
@@ -109,15 +109,16 @@ sections.forEach((section, index) => {
     }
 
     // fade in new video
-    vid.style.visibility = 'visible';
-    vid.style.opacity = 1;
-    vid.play();
-
-    currentVideo = vid;
+    if (currentVideo !== vid) {
+      vid.style.visibility = 'visible';
+      vid.style.opacity = 1;
+      vid.play();
+      currentVideo = vid;
+    }
   });
 });
 
-// fade out video when leaving the whole work list
+// fade out when leaving the entire work list
 document.querySelector('.work-list').addEventListener('mouseleave', () => {
   if (currentVideo) {
     currentVideo.style.opacity = 0;
