@@ -123,6 +123,16 @@ section {
   z-index: 1;
 }
 
+/* Hide others */
+.work-list:has(.sec1:hover) ~ .video-bg video:not(#vid1),
+.work-list:has(.sec2:hover) ~ .video-bg video:not(#vid2),
+.work-list:has(.sec3:hover) ~ .video-bg video:not(#vid3),
+.work-list:has(.sec4:hover) ~ .video-bg video:not(#vid4),
+.work-list:has(.sec5:hover) ~ .video-bg video:not(#vid5) {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .sec1 h2 {
     color: #17BD99;
 }
