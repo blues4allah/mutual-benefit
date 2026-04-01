@@ -189,7 +189,8 @@ p {
   }
 
   .video-bg video {
-    display: none; 
+    display: none !important;
+    pointer-events: none; 
   }
 }
 
