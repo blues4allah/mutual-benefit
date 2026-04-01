@@ -75,6 +75,7 @@ section {
 .video-bg video {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 /* Video container stays fixed behind content */
@@ -91,31 +92,30 @@ section {
   pointer-events: none;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .video-hover:hover video {
-    opacity: 1;
-  }
-}
-
 /* Hover rules remain the same */
 .work-list:has(.sec1:hover) ~ .video-bg #vid1 {
   opacity: 1;
+  visibility: visible;
 }
 
 .work-list:has(.sec2:hover) ~ .video-bg #vid2 {
   opacity: 1;
+  visibility: visible;
 }
 
 .work-list:has(.sec3:hover) ~ .video-bg #vid3 {
   opacity: 1;
+  visibility: visible;
 }
 
 .work-list:has(.sec4:hover) ~ .video-bg #vid4 {
   opacity: 1;
+  visibility: visible;
 }
 
 .work-list:has(.sec5:hover) ~ .video-bg #vid5 {
   opacity: 1;
+  visibility: visible;
 }
 
 .work-list {
@@ -130,18 +130,7 @@ section {
 .work-list:has(.sec4:hover) ~ .video-bg video:not(#vid4),
 .work-list:has(.sec5:hover) ~ .video-bg video:not(#vid5) {
   opacity: 0;
-}
-
-/* Default: disable interaction (mobile first) */
-.video-hover video {
-  pointer-events: none;
-}
-
-/* Only enable hover behavior on real hover devices (desktop) */
-@media (hover: hover) and (pointer: fine) {
-  .video-hover:hover video {
-    pointer-events: auto;
-  }
+  visibility: hidden;
 }
 
 .sec1 h2 {
@@ -199,6 +188,7 @@ p {
 
   .video-bg video {
     display: none !important;
+    visibility: hidden;
     pointer-events: none; 
   }
 }
