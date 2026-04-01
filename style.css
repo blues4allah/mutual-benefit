@@ -114,6 +114,10 @@ section {
   opacity: 1;
 }
 
+.work-list:has(.sec5:hover) ~ .video-bg #vid5 {
+  opacity: 1;
+}
+
 .work-list {
   position: relative;
   z-index: 1;
@@ -123,7 +127,8 @@ section {
 .work-list:has(.sec1:hover) ~ .video-bg video:not(#vid1),
 .work-list:has(.sec2:hover) ~ .video-bg video:not(#vid2),
 .work-list:has(.sec3:hover) ~ .video-bg video:not(#vid3),
-.work-list:has(.sec4:hover) ~ .video-bg video:not(#vid4) {
+.work-list:has(.sec4:hover) ~ .video-bg video:not(#vid4),
+.work-list:has(.sec5:hover) ~ .video-bg video:not(#vid5) {
   opacity: 0;
 }
 
@@ -139,19 +144,23 @@ section {
   }
 }
 
-.one-degree h2 {
+.sec1 h2 {
     color: #17BD99;
 }
 
-.one-home h2 {
+.sec2 h2 {
+    color: #BE1DCD;
+}
+
+.sec3 h2 {
   color: #35BFFF;
 }
 
-.unite-us h2 {
+.sec4 h2 {
   color: #CC3D3D;
 }
 
-.zoom h2 {
+.sec5 h2 {
   color: #FFDE72;
 }
 
@@ -200,7 +209,6 @@ p {
   text-decoration: none !important; /* remove underline */
   color: inherit !important;         /* use your text color */
   -webkit-tap-highlight-color: transparent; /* remove highlight on iOS */
-  overflow: hidden; /* ensures smooth transform animations */
 }
 
 .clickable-section:hover,
