@@ -73,7 +73,6 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 50px;
-  width: 100%;
 }
 
 section {
@@ -193,6 +192,7 @@ h2, h3 {
 p {
   line-height: 1.3;
   margin: 0;
+  font-size: 16px;
 }
 
 /* Mobile breakpoint: stack header vertically */
@@ -201,7 +201,6 @@ p {
     flex-direction: column;
     align-items: center; /* center items when stacked */
     gap: 20px; /* space between logo and text */
-    padding: 0px 20px; /* adjust padding for smaller screens */
   }
   main {
     padding-left: 60px;
@@ -212,6 +211,14 @@ p {
     display: none !important;
     visibility: hidden;
     pointer-events: none; 
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 15px;
   }
 }
 
