@@ -32,7 +32,6 @@ main {
     justify-content: center;
     align-items: flex-start;
     gap: 100px;
-    width: 100%;
     padding-left: 200px;
 }
 
@@ -197,14 +196,24 @@ p {
 
 /* Mobile breakpoint: stack header vertically */
 @media (max-width: 768px) {
-  header, footer {
+  header {
     flex-direction: column;
     align-items: center; /* center items when stacked */
     gap: 20px; /* space between logo and text */
   }
-  main {
-    padding-left: 60px;
+
+  body {
+    align-items: center;
+  }
+
+  footer {
     flex-direction: column;
+    align-items: center; /* center items when stacked */
+    gap: 20px; /* space between logo and text */
+  }
+
+  main {
+    padding: 0 20px;
   }
 
   .video-bg video {
