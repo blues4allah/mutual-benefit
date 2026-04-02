@@ -7,6 +7,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Knewave Outline';
+  src: url('./fonts/knewave-outline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Base styles */
 body {
   margin: 0;
@@ -22,11 +29,11 @@ body {
 
 main {
     display: flex;
-    padding-left: 200px;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 200px;
+    gap: 100px;
+    width: 100%
 }
 
 /* Header layout */
@@ -56,6 +63,7 @@ footer {
   align-items: flex-start;
   gap: 50px;
   width: 100%;
+  padding-left: 200px;
 }
 
 section {
@@ -63,6 +71,10 @@ section {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+}
+
+.coming h2 {
+  font-family: 'Knewave Outline';
 }
 
 .video-bg {
