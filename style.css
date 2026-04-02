@@ -202,6 +202,10 @@ p {
     gap: 20px; /* space between logo and text */
   }
 
+  .tags {
+    padding: 80px 0;
+  }
+
   body {
     align-items: center;
   }
