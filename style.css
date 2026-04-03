@@ -30,9 +30,9 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 100px;
-    padding-left: 200px;
+    width: 100%;
 }
 
 /* Header layout */
@@ -72,6 +72,10 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 50px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-left: 400px;
 }
 
 section {
@@ -79,6 +83,21 @@ section {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+}
+
+.about {
+  background-color: #101010;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 100px;
+}
+
+.about h1 {
+  font-size: 40px;
 }
 
 .coming h2 {
@@ -136,11 +155,6 @@ section {
 .work-list:has(.sec5:hover) ~ .video-bg #vid5 {
   opacity: 1;
   visibility: visible;
-}
-
-.work-list {
-  position: relative;
-  z-index: 1;
 }
 
 /* Hide others */
@@ -208,6 +222,10 @@ p {
 
   body {
     align-items: center;
+  }
+
+  .work-list {
+    padding-left: 100px;
   }
 
   footer {
