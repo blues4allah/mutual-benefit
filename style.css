@@ -147,8 +147,9 @@ section {
 .packages {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 100px;
+  align-items: top;
+  justify-content: space-between;
+  gap: 60px;
 }
 
 .packages p {
@@ -238,19 +239,19 @@ section {
   visibility: hidden;
 }
 
-.sec1 h2 {
+.sec1 h2, .sec1 h4 {
     color: #17BD99;
 }
 
-.sec2 h2 {
+.sec2 h2, .sec2 h4 {
     color: #BE1DCD;
 }
 
-.sec3 h2 {
+.sec3 h2, .sec3 h4 {
   color: #35BFFF;
 }
 
-.sec4 h2 {
+.sec4 h2, .sec4 h4 {
   color: #CC3D3D;
 }
 
@@ -279,12 +280,6 @@ section {
     width: 350px;
   }
 
-  .packages {
-    flex-direction: column;
-    padding-top: 40px;
-    gap: 50px;
-  }
-
   .about {
     padding: 100px 20px;
   }
@@ -311,6 +306,14 @@ section {
 
   p {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 980px) {
+    .packages {
+    flex-direction: column;
+    padding-top: 40px;
+    gap: 50px;
   }
 }
 
