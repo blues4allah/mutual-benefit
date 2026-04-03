@@ -282,6 +282,7 @@ section {
   .packages {
     flex-direction: column;
     padding-top: 40px;
+    gap: 50px;
   }
 
   .about {
