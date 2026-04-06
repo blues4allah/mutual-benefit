@@ -183,12 +183,6 @@ section {
   overflow: hidden;
 }
 
-.video-bg video {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-
 /* Video container stays fixed behind content */
 .video-bg video {
   position: absolute;
@@ -201,6 +195,21 @@ section {
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
+  visibility: hidden;
+}
+
+.video-bg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;      /* scale dynamically */
+  height: 50%;     /* fill vertically */
+  transform: translate(-50%, -50%); /* center horizontally & vertically */
+  object-fit: cover;               /* cover the screen without distortion */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 /* Hover rules remain the same */
@@ -225,6 +234,11 @@ section {
 }
 
 .work-list:has(.sec5:hover) ~ .video-bg #vid5 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.work-list:has(.sec6:hover) ~ .video-bg #vid6 {
   opacity: 1;
   visibility: visible;
 }
@@ -256,6 +270,10 @@ section {
 }
 
 .sec5 h2 {
+  color: #702BFA;
+}
+
+.sec6 h2 {
   color: #FFDE72;
 }
 
@@ -294,10 +312,11 @@ section {
     gap: 20px; /* space between logo and text */
   }
 
-  .video-bg video {
+  .video-bg video, .video-bg img {
     display: none !important;
     visibility: hidden;
-    pointer-events: none; 
+    pointer-events: none;
+    opacity: 0; 
   }
 
   h2 {
